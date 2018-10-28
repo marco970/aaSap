@@ -34,14 +34,25 @@ public class SingleFieldValid {
 						
 					}
 					else	{ //do WP i DK
-						
+						//do WP i DK
 					}
 				}
-				else setValid(false, "nieprawidłowa długość"); //do ==13
+				else {
+					if(field.length()==0) setValid(true,"");
+					else setValid(false, "nieprawidłowa długość"); //do ==13
+					
+				}
 			}
 		}
 	}//EoKonstruktor
 	//metody
+	public void numberValid(String fieldName, String field)	{
+		if (fieldName.equals("ZZ")) {
+			if (field.length()==13)	{
+				
+			}
+		}
+	}
 	public void setValid(boolean result, String errMsg)	{
 		if (validResult)	{
 		validResult = result;
